@@ -7,10 +7,23 @@ function App() {
   let [counter , setcounter] = useState(10)
 
   const increase = () => {
-    setcounter(counter + 1)
+    if (counter<20) {
+      
+      setcounter(counter + 1)
+    }
+    else{
+      setcounter(counter)
+    }
   }
+
+
   const decrease = () => {
-    setcounter(counter - 1)
+    if (counter>0) {
+      setcounter(counter - 1)
+      
+    } else {
+      setcounter(counter)
+    }
   }
 
   return (
